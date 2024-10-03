@@ -52,7 +52,7 @@ public class UserNotesService {
     }
 
     public void createTag() {
-        //TODO 2.1 implement the method
+
     }
 
     public void addTagToNote() {

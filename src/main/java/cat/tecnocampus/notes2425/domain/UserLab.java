@@ -1,6 +1,17 @@
 package cat.tecnocampus.notes2425.domain;
 
-import java.util.List;
+import jakarta.persistence.*;
 
-public record UserLab(long id, String username, String email) {
-}
+@Entity
+@Table(name = "User_lab")
+public record UserLab(
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        long id,
+
+        @Column(nullable = false, unique = true, length = 255)
+        String username,
+
+        @Column(nullable = false, unique = true, length = 255)
+        String email
+) {}
